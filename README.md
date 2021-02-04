@@ -1,5 +1,5 @@
 
-# Acer Aspire E 15 E5-576G-59S6 Hackintosh
+# Acer Aspire E5-576G-59S6 Hackintosh
 
 macOS Big Sur on Acer E5-576G-59S6 with OpenCore 0.6.6 EFI folder
 <img src="https://github.com/techgenius1/E5-576G-59S6-Hackintosh-OpenCore/blob/master/BigSur576G.png?raw=true" alt="look">
