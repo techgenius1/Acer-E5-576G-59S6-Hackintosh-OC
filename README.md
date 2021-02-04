@@ -6,24 +6,30 @@ macOS Big Sur on Acer E5-576G-59S6 with OpenCore 0.6.6 EFI folder
 
 ## Configuration
 
-| Specifications | Detail                                                  |
+| Specifications      | Detail                                      |
 | ------------------- | ------------------------------------------- |
-| Computer model      | Acer Aspire E 15 E5-576G (MX150)      |
-| Processor           | Intel Core i5-8250U Processor     |
-| Memory              | 12GB DDR3 1600MHz             |
-| Integrated Graphics | Intel UHD Graphics 620                     |
-| Sound Card          | Realtek ALC255 (layout-id:30)           |
-| Wireless Card       | Intel Wireless 3168                        |
+| Computer model      | Acer Aspire E 15 E5-576G (MX150)            |
+| BIOS Version        | Acer v1.49                                  |
+| Processor           | Intel Core i5-8250U Processor               |
+| Memory              | 12GB DDR3 1600MHz                           |
+| Integrated Graphics | Intel UHD Graphics 620                      |
+| Sound Card          | Realtek ALC255 (layout-id:30)               |
+| Wireless Card       | Intel Wireless 8160                         |
+| Touchpad            | Synaptics I2C Touchpad                      |
 
+
+
+## What's not working (Never will work) ⚠️
+
+- [ ] Nvidia MX150
+- [ ] Card Reader
 
 ## Current Status in OpenCore
 
 - Discrete graphic card is not working, since macOS doesn't support Optimus technology
   - Have used [SSDT-DGPU](EFI/OC/ACPI/SSDT-DGPU.dsl) to disable it in order to save power
 - Using a HDMI-VGA adapter to connect an external monitor causes lag and black screen for unknown reason, but using either a HDMI-HDMI or VGA-VGA direct connection is fine.
-- Everything else should work well
-
-
+- Everything else works well
 
 ## Installation
 
@@ -33,6 +39,8 @@ macOS Big Sur on Acer E5-576G-59S6 with OpenCore 0.6.6 EFI folder
   - [Xiaomi Mi Notebook Pro MacOS Catalina Installation Guide || ENGLISH](https://bit.ly/34biTqw)
 - You can refer to the following tutorials for additional configuration
    - https://dortania.github.io/vanilla-laptop-guide/
+- You should add Serial Number, UUID, MLB and ROM details to Config -> PlatformInfo -> Generic if you want to get iServices working.
+
 - If you intend to dual boot Windows on the same drive, it is recommended that you install macOS **first** then use BootCamp to install Windows everything should work fine.
 - It is highly recommended that you use [ProperTree](https://github.com/corpnewt/ProperTree) or OpenCore Configurator to make any changes to the config.plist in `\EFI\OC`, otherwise you may corrupt the file.
 - Add `BOOT` and `OC` folders to your EFI partition.
